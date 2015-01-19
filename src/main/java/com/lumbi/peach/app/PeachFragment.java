@@ -9,8 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
-import com.lumbi.peach.model.Model;
-
 /**
  * Created by gabriellumbi on 14-11-26.
  *
@@ -29,7 +27,7 @@ public class PeachFragment extends Fragment {
             view = inflater.inflate(layout.value(), container, false);
         }
 
-        LFrameLayout cFrameLayout = new LFrameLayout(getActivity());
+        PeachFrameLayout cFrameLayout = new PeachFrameLayout(getActivity());
         FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(
                 FrameLayout.LayoutParams.MATCH_PARENT,
                 FrameLayout.LayoutParams.MATCH_PARENT);
@@ -59,35 +57,21 @@ public class PeachFragment extends Fragment {
         setArguments(bundle);
     }
 
-    public void addArgument(String key, Model model){
-        Bundle bundle = getArguments();
-        if(bundle == null) bundle = new Bundle();
-        bundle.putString(key, model.toJson());
-        setArguments(bundle);
-    }
-
-    public <T> T getModelArgument(String key, Class clazz){
-        Bundle bundle = getArguments();
-        if(bundle == null) return null;
-        if(bundle.get(key) == null) return null;
-        return Model.fromJson(bundle.getString(key), clazz);
-    }
-
     /*
         Custom frame layout.
      */
 
-    public class LFrameLayout extends FrameLayout{
+    public class PeachFrameLayout extends FrameLayout{
 
-        public LFrameLayout(Context context) {
+        public PeachFrameLayout(Context context) {
             super(context);
         }
 
-        public LFrameLayout(Context context, AttributeSet attrs) {
+        public PeachFrameLayout(Context context, AttributeSet attrs) {
             super(context, attrs);
         }
 
-        public LFrameLayout(Context context, AttributeSet attrs, int defStyle) {
+        public PeachFrameLayout(Context context, AttributeSet attrs, int defStyle) {
             super(context, attrs, defStyle);
         }
 
