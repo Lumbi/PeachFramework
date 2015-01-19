@@ -1,4 +1,4 @@
-package com.lumbi.framework.app;
+package com.lumbi.peach.app;
 
 import android.app.Fragment;
 import android.content.Context;
@@ -9,14 +9,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
-import com.lumbi.framework.model.Model;
+import com.lumbi.peach.model.Model;
 
 /**
  * Created by gabriellumbi on 14-11-26.
  *
  * Custom Fragment. Base class for fragments in this project.
  */
-public class LFragment extends Fragment {
+public class PeachFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

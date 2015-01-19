@@ -1,4 +1,4 @@
-package com.lumbi.framework.app;
+package com.lumbi.peach.app;
 
 import android.content.Context;
 import android.widget.BaseAdapter;
@@ -10,7 +10,7 @@ import java.util.List;
  * Created by gabriellumbi on 14-11-26.
  * Custom generic adapter.
  */
-public abstract class LAdapter<T> extends BaseAdapter {
+public abstract class PeachAdapter<T> extends BaseAdapter {
 
     protected List<T> mItems = new ArrayList<T>();
     protected Context mContext = null;

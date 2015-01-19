@@ -1,4 +1,4 @@
-package com.lumbi.framework.app;
+package com.lumbi.peach.app;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -7,10 +7,10 @@ import java.lang.annotation.Target;
 
 /**
  * Created by gabriellumbi on 14-11-26.
- * Indicates that this class should use specified layout for content view.
+ * Indicates that this View/Fragment should be found using an id.
  */
-@Target(ElementType.TYPE)
+@Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Layout {
+public @interface Outlet {
     int value() default -1;
 }

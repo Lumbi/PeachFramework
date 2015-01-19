@@ -1,4 +1,4 @@
-package com.lumbi.framework.app;
+package com.lumbi.peach.app;
 
 import android.os.Bundle;
 
@@ -7,7 +7,7 @@ import android.os.Bundle;
  *
  * Custom Activity. Base class for activities used in this project.
  */
-public class LActivity extends android.app.Activity{
+public class PeachActivity extends android.app.Activity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

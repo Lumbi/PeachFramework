@@ -1,4 +1,4 @@
-package com.lumbi.framework.app;
+package com.lumbi.peach.app;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -8,17 +8,17 @@ import android.util.AttributeSet;
  *
  * Custom TextView. Base class for text views in this project.
  */
-public class LTextView extends android.widget.TextView {
+public class PeachTextView extends android.widget.TextView {
 
-    public LTextView(Context context) {
+    public PeachTextView(Context context) {
         super(context);
     }
 
-    public LTextView(Context context, AttributeSet attrs) {
+    public PeachTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public LTextView(Context context, AttributeSet attrs, int defStyle) {
+    public PeachTextView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
     }
 }

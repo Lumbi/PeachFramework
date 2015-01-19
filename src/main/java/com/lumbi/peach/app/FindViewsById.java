@@ -1,4 +1,4 @@
-package com.lumbi.framework.app;
+package com.lumbi.peach.app;
 
 import android.app.Activity;
 import android.app.Fragment;
@@ -14,7 +14,7 @@ import java.lang.reflect.Field;
  * This is a utility class that encapsulate all the findViewById logic.
  * This is similar to dependency injection.
  *
- * The {@code in()} methods will look for fields annotated with {@link com.lumbi.framework.app.Outlet @Outlet(resource id)}.
+ * The {@code in()} methods will look for fields annotated with {@link Outlet @Outlet(resource id)}.
  * It will then find views or fragments using the id passed into the @Outlet() annotation.
  * </br></br>
  *   Usage example
@@ -95,10 +95,10 @@ public final class FindViewsById {
     }
 
     /**
-     * Similar to {@link com.lumbi.framework.app.FindViewsById#in(android.view.View) FindViewsById.in(View).}
+     * Similar to {@link FindViewsById#in(android.view.View) FindViewsById.in(View).}
      * Instead of assigning the found views to the view's Outlets, the found views are assigned to
      * the delegate object.
-     * @see com.lumbi.framework.app.FindViewsById#in(android.view.View)
+     * @see FindViewsById#in(android.view.View)
      * @param view
      * @param delegate - The delegate object with {@literal @}Outlet annotated fields to fill.
      */

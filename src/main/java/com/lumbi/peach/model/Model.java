@@ -1,4 +1,4 @@
-package com.lumbi.framework.model;
+package com.lumbi.peach.model;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
