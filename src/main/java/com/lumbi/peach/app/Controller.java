@@ -38,7 +38,7 @@ public abstract class Controller {
         this.listener = listener;
     }
 
-    public abstract class ControllerListener {
+    public static abstract class ControllerListener {
         public void onAction(Controller controller, int actionCode) {}
         public void onAction(Controller controller, int actionCode, int arg) {}
         public void onAction(Controller controller, int actionCode, String arg) {}

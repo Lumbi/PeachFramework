@@ -1,6 +1,7 @@
 package com.lumbi.peach.app;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -31,7 +32,7 @@ public class PeachActivity extends android.app.Activity {
 
         controllers.clear();
 
-        for(Field field : this.getClass().getFields()) {
+        for(Field field : this.getClass().getDeclaredFields()) {
             if(field.isAnnotationPresent(Controls.class)) {
                 field.setAccessible(true);
                 try {
