@@ -69,6 +69,12 @@ public abstract class Controller {
         this.listener = listener;
     }
 
+    public void notifyListener(int actionCode){
+        if(listener != null){
+            listener.onAction(this, actionCode);
+        }
+    }
+
     public static abstract class ControllerListener {
         public void onAction(Controller controller, int actionCode) {}
         public void onAction(Controller controller, int actionCode, int arg) {}
