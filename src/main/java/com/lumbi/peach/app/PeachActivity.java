@@ -38,12 +38,12 @@ public class PeachActivity extends android.app.Activity {
                 try {
                     Controller controller = (Controller) field.get(this);
                     Controls controls = field.getAnnotation(Controls.class);
-                    controller.control(findViewById(controls.value()));
+                    controller.control((android.view.ViewGroup) findViewById(controls.value()));
                     controllers.add(controller);
                 } catch (IllegalAccessException e) {
                     e.printStackTrace();
                 } catch (ClassCastException e){
-                    System.err.println("@Controls annotation may only be used on Controllers.");
+                    System.err.println("@Controls annotation may only be used on Controllers and Controllers must control a ViewGroup");
                     e.printStackTrace();
                 }
             }
