@@ -29,6 +29,10 @@ public abstract class Controller implements ViewTreeObserver.OnGlobalLayoutListe
         this.context = context;
     }
 
+    public ViewGroup getView(){
+        return view;
+    }
+
     public final void control(final ViewGroup view) {
         this.view = view;
         FindViewsById.in(view, this);
