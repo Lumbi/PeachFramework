@@ -15,6 +15,10 @@ public abstract class PeachAdapter<T> extends BaseAdapter {
     protected List<T> mItems = new ArrayList<T>();
     protected Context mContext = null;
 
+    public PeachAdapter(Context context){
+        mContext = context;
+    }
+
     public void update(List<T> items){
         mItems = items;
         notifyDataSetChanged();
